@@ -23,6 +23,7 @@ const sequelize = new Sequelize(
 
 // authentication and synchronization
 sequelize.authenticate()
+sequelize.sync()
   .then(() => {
     sequelize.sync().catch(() => console.log("Cannot sync the database"));
   })
